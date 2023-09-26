@@ -1,25 +1,31 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Grid } from '@mui/material';
+import Navbar from './components/Navbar/Navbar';
+import UsersTable from './components/UserTable/UserTable';
+import MenuBar from './components/MenuBar/MenuBar';
 
-function App() {
+
+
+const App = () => {
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+ 
+      <Grid container spacing={2}>
+        {/* Sidebar */}
+        <Grid item xs={3} sm={3} md={3} lg={3} xl={3} height={'100vh'} >
+          <Navbar/>
+        </Grid>
+        {/* Main Content Area */}
+        <Grid item container xs={9} sm={9} md={9} lg={9} xl={9} height={'100vh'}>
+          <Grid item xs={12} height={'5vh'}>
+            <MenuBar />
+          </Grid>
+          <Grid item xs={12} height={'90vh'}>
+            <UsersTable />
+          </Grid>
+        </Grid>
+      </Grid>
+    
   );
 }
 
