@@ -39,10 +39,11 @@ const Navbar = () => {
         sx={{
           flexDirection: 'column',
           alignItems: 'flex-start',
+        
         }}
       >
         {/* Logo */}
-        <Typography variant="h6">
+        <Typography variant="h6" sx={{marginTop: '2vh'}}>
           Logo
         </Typography>
 
@@ -52,11 +53,12 @@ const Navbar = () => {
        flexDirection: 'column', 
        color: 'white',
        width: '100%',  // Take up full width of the container
-       alignItems: 'center'
+       alignItems: 'center',
+       padding: 0
     }}>
       {icons.map((item, index) => (
-        <ListItem key={index} style={{  marginTop: '2.5vh',padding: 0}}>
-          <ListItemIcon>
+        <ListItem key={index} style={{  marginTop: '2.3vh',padding: 0, }}>
+          <ListItemIcon sx={{minWidth: '3.2vw' }}>
             <item.icon sx={{color: 'white'}}/>
           </ListItemIcon>
           <Typography variant="body1">
