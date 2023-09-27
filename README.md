@@ -1,3 +1,20 @@
+# First I had a great time doing this, it took me 7.5 hours to finish.
+# Important!
+
+I ran into some issues I will explain:
+
+- First the styling, I know better practices are in a styling file like the one in Navbar I left it 
+  on purpose, I was having problems with the libraries and couldn't waste more time.
+- Second, regarding main big components best practice is to use a connector for all the different actions
+  that came come to the app.
+- As you can see I used material ui logos, I took off the search button since if it can start searching
+  from first letter than it makes the most sense.
+
+
+  ## Looking forward to speak to you, hope you like it.
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
