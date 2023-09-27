@@ -4,7 +4,7 @@ import MoreVertIcon from '@mui/icons-material/MoreVert';
 
 const MenuBar = () => {
   return (
-    <div style={{ borderBottom: "1px solid #ccc",  width: '100%' }}>
+    <div style={{   width: '100%', height: '8vh' ,borderBottom: '1px solid #ccc'}}>
       {/* Menu Items */}
       <div style={{  display: 'flex', alignItems: 'center', width: '100%', justifyContent: 'flex-end' }}>
 
@@ -13,7 +13,7 @@ const MenuBar = () => {
       <Button  sx={{fontSize: '1vw'}} color="inherit">Salaries</Button>
 
       {/* Line Divider */}
-      <div style={{ width:'0.1vw', height: '5vh', backgroundColor: '#ccc', margin: '0 1rem' }}></div>
+      <div style={{ width:'0.1vw', height: '4vh', backgroundColor: '#ccc', margin: '0 1rem' }}></div>
 
       <Button  sx={{fontSize: '1vw'}} color="inherit">For Employers</Button>
 

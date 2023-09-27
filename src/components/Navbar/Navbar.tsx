@@ -27,7 +27,7 @@ const Navbar = () => {
       sx={{
         backgroundColor: 'blue',
         position: 'sticky',
-        height: 'inherit',
+        height: '100vh',
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'space-between',
