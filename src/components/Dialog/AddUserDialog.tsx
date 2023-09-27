@@ -26,7 +26,6 @@ export const AddUserDialog: React.FC<AddUserDialogProps> = ( props) => {
     }, [fullName, email, department, actions]);
 
     const handleSubmit = () => {
-        // onAdd({ fullName, email, department, actions });
         const newUser: User = {
             fullName,
             email,

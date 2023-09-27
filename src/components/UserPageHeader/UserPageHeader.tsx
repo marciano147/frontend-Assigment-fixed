@@ -35,7 +35,7 @@ const disableDeleteButton = rowSelectionModel.length === 0;
   return (
     <Box sx={{ display: 'flex', flexDirection: 'column', width: '100%',  }}>
       {/* Title */}
-      <Typography variant="h5" sx={{ color: 'blue', marginBottom: '1rem', fontWeight: 'bold' }}>
+      <Typography variant="h5" sx={{ color: '#0f0094', marginBottom: '1rem', fontWeight: '700' }}>
         Users
       </Typography>
 
@@ -50,25 +50,18 @@ const disableDeleteButton = rowSelectionModel.length === 0;
     placeholder="Search Users"
     onChange={handleSearchTextChange}
     value={searchText}
+    InputLabelProps={{sx: {backgroundColor: 'red'}}}
     InputProps={{
       startAdornment: (
         <InputAdornment position="start">
           <SearchRoundedIcon />
         </InputAdornment>
       ),
-      sx: { backgroundColor: 'lightblue' , width: '40vw' }
+      sx: { backgroundColor: 'rgba(12, 0, 116, 0.1)' , width: '40vw', color:'#0f0094ba' , fontWeight:'bold'
+    }
     }}
   />
 
-  {/* Search Button */}
-  {/* <Button 
-    variant="contained" 
-    color="primary" 
-    sx={{ height: '39.88px', textTransform: 'none',borderTopLeftRadius: 0, 
-    borderBottomLeftRadius: 0,  }}
-    >
-    Search
-  </Button> */}
 </Box>
         {/* Action Buttons */}
         <Box sx={{ marginLeft: '1rem', display: 'flex', alignItems: 'center' }}>

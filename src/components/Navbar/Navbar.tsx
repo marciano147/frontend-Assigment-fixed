@@ -8,31 +8,32 @@ import ListAltRoundedIcon from '@mui/icons-material/ListAltRounded';
 import AssignmentRoundedIcon from '@mui/icons-material/AssignmentRounded';
 import VerifiedUserRoundedIcon from '@mui/icons-material/VerifiedUserRounded';
 import DescriptionRoundedIcon from '@mui/icons-material/DescriptionRounded';
+import { Link } from 'react-router-dom';
 
 const icons = [
-  { icon: AccountCircleRoundedIcon, label: "Account" },
-  { icon: BorderAllRoundedIcon, label: "Borders" },
-  { icon: PersonAddAltRoundedIcon, label: "Add Person" },
-  { icon: CreateRoundedIcon, label: "Create" },
-  { icon: Groups2RoundedIcon, label: "Groups" },
-  { icon: ListAltRoundedIcon, label: "List Alt" },
-  { icon: AssignmentRoundedIcon, label: "Assignment" },
-  { icon: VerifiedUserRoundedIcon, label: "Verified User" },
-  { icon: DescriptionRoundedIcon, label: "Description" },
+  { icon: AccountCircleRoundedIcon, label: "Profile" },
+  { icon: BorderAllRoundedIcon, label: "Departments" },
+  { icon: PersonAddAltRoundedIcon, label: "Users" },
+  { icon: CreateRoundedIcon, label: "Post a job" },
+  { icon: ListAltRoundedIcon, label: "Jobs" },
+  { icon: Groups2RoundedIcon, label: "Candidates" },
+  { icon: AssignmentRoundedIcon, label: "Reports" },
+  { icon: VerifiedUserRoundedIcon, label: "License & Billing" },
+  { icon: DescriptionRoundedIcon, label: "Invoices" },
 ];
 
 const Navbar = () => {
   return (
     <AppBar
       sx={{
-        backgroundColor: 'blue',
+        backgroundColor: '#09005a',
         position: 'sticky',
         height: '100vh',
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'space-between',
-        alignItems: 'flex-start',  // Align to the left
-          // You can adjust this width as needed
+        alignItems: 'flex-start',  
+         
       }}
     >
       <Toolbar
@@ -43,37 +44,38 @@ const Navbar = () => {
         }}
       >
         {/* Logo */}
-        <Typography variant="h6" sx={{marginTop: '2vh'}}>
-          Logo
-        </Typography>
+        <Typography sx={{ color: 'white', fontWeight: '1000', marginTop: '2vh', fontSize:'1.9vw' }}>
+  EXPOINT.
+</Typography>
+
 
         {/* Navigation Items */}
         <List style={{ 
        display: 'flex', 
        flexDirection: 'column', 
        color: 'white',
-       width: '100%',  // Take up full width of the container
-       alignItems: 'center',
+       width: '100%',  
        padding: 0
     }}>
-      {icons.map((item, index) => (
-        <ListItem key={index} style={{  marginTop: '2.3vh',padding: 0, }}>
-          <ListItemIcon sx={{minWidth: '3.2vw' }}>
-            <item.icon sx={{color: 'white'}}/>
-          </ListItemIcon>
-          <Typography variant="body1">
-            {item.label}
-          </Typography>
-        </ListItem>
+   {icons.map((item, index) => (
+  <Link to={`/${item.label.toLowerCase().replace(/ /g, '-')}`} key={index} style={{ textDecoration: 'none', color: 'inherit' }}>
+    <ListItem style={{ marginTop: '2.3vh', padding: 0 }}>
+      <ListItemIcon sx={{ minWidth: '3.2vw' }}>
+        <item.icon sx={{ color: 'white', fontSize: '1.6vw' }} />
+      </ListItemIcon>
+      <Typography variant="body1" sx={{ fontSize: '1.15vw' }}>
+        {item.label}
+      </Typography>
+    </ListItem>
+  </Link>
       ))}
     </List>
 
-        {/* Help, Privacy Policy, Terms of Use */}
-
+       
       </Toolbar>
       <div style={{
-  width: 'inherit',  // Take up full width of the container
-  backgroundColor: 'darkblue',
+  width: 'inherit',  
+  backgroundColor: '#06003b',
   
   }}>
     <div style={{
@@ -86,22 +88,22 @@ const Navbar = () => {
   marginBottom: '2vh',
   }}>
 
-    <Typography variant="body2">
+    <Typography sx={{fontSize: '0.8vw'}} variant="body2">
         Help
     </Typography>
-    <Typography variant="body2">
+    <Typography sx={{fontSize: '0.8vw'}} variant="body2">
         Privacy Policy
     </Typography>
-    <Typography variant="body2">
+    <Typography sx={{fontSize: '0.8vw'}} variant="body2">
         Terms of Use
     </Typography>
-    <Typography variant="body2">
+    <Typography variant="body2" sx={{fontSize: '0.8vw'}}>
         Job Posting Rules
     </Typography>
-    <Typography variant="body2">
+    <Typography sx={{fontSize: '0.8vw'}} variant="body2">
         Attribution Notices
     </Typography>
-    <Typography variant="body2">
+    <Typography variant="body2" sx={{fontSize: '0.8vw'}}>
         Corporate Responsibility
     </Typography>
     </div>

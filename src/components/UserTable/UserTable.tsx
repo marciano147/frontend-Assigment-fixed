@@ -24,7 +24,6 @@ const UsersTable: React.FC<UsersTableProps> = (props) => {
     const users = useSelector((state: any) => state.users);
 
     const handleAddUser = (user: User) => {
-      //parser from type user to an object for the json file
       const newId = mockData[mockData.length - 1].id + 1;
       const newUser = {
         ...user,
@@ -89,7 +88,6 @@ const showAddDialog = addUserDialogOpen && (
         rowSelectionModel={rowSelectionModel}
         onRowSelectionModelChange={(rowSelectionModel) => setRowSelectionModel(rowSelectionModel)}
       />
-
       {showDeleteDialog}
       {showAddDialog}
     </div>
